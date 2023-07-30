@@ -50,7 +50,60 @@
 %----------------------------------------------------------------------------------------
 
 \section*{Question 1 Solutions} % Unnumbered section
+Let $A, B\subseteq\Omega$.
 
+1. 
+
+Given that event $A$ is independent of itself, this means that $\mathbb{P}(A|A) = \mathbb{P}(A)$. This implies $\mathbb{P}(A) = \mathbb{P}(A)$ and so $\mathbb{P}(A)$ must equal either $1$ or $0$.
+
+2.
+
+Given event $A$ such that $\mathbb{P}(A) = 1$ or $\mathbb{P}(A) = 0$, we observe the conditional probability between events $A$ and $B$.
+
+For the case where $\mathbb{P}(A) = 1$:
+\begin{align*}
+    \mathbb{P}(B|A) &= \frac{\mathbb{P}(B\cap A)}{\mathbb{P}(A)}\\
+    &= \mathbb{P}(B\cap A)\\
+    &= \mathbb{P}(B)\mbox{.}
+\end{align*}
+\hspace*{6mm}We reach this result because the intersection with a guaranteed event will always be the probability of the other event.
+
+For the case where $\mathbb{P}(A) = 0$:
+\begin{align*}
+    \mathbb{P}(A|B) &= \frac{\mathbb{P}(A\cap B)}{\mathbb{P}(B)}\\
+    &= \frac{\mathbb{P}(A) + \mathbb{P}(B) - \mathbb{P}(A\cup B)}{\mathbb{P}(B)}\\
+    &= \frac{\mathbb{P}(B) - \mathbb{P}(A\cup B)}{\mathbb{P}(B)}\\
+    &= \frac{\mathbb{P}(B) - \mathbb{P}(B)}{\mathbb{P}(B)}\\
+    % &= \frac{0}{\mathbb{P}(B)}\\
+    &= 0\\
+    &= \mathbb{P}(A)\mbox{.}
+\end{align*}
+\hspace*{6mm} Since the union with an impossible event always returns the probability of the other event, we reach our result.
+
+3.
+
+Note, by the Total Law of Probability, $\mathbb{P}(A\cap B) \leq 0$.
+
+Now observe,
+\begin{align*}
+    \mathbb{P}(A\cap B) & = \mathbb{P}(A) +\mathbb{P}(B) - \mathbb{P}(A\cap B)\\    
+    1 &\geq \mathbb{P}(A) +\mathbb{P}(B) - \mathbb{P}(A\cap B)\\
+    \mathbb{P}(A\cap B)\ &\geq \mathbb{P}(A) +\mathbb{P}(B) - 1\mbox{.}
+\end{align*}
+\hspace*{6mm} The inequality has been proven, thus we are done.
+
+4.
+
+Using the previous proven inequality,
+\begin{align*}
+    \mathbb{P}(A_1\cap A_2)\ &\geq \mathbb{P}(A_1) + \mathbb{P}(A_2) - 1\\
+    \mathbb{P}(A_1\cap A_2\cap A_3)\ &\geq \mathbb{P}(A_1) + \mathbb{P}(A_2) - 1\\
+    &= \mathbb{P}(A_1) +\mathbb{P}(A_2) - 1 +  \mathbb{P}(A_3) - 1\\
+    &= \mathbb{P}(A_1) +\mathbb{P}(A_2) +  \mathbb{P}(A_3) - 2\\
+    &\vdots\\
+    \mathbb{P}(\bigcap_{i = 1}^n A_i)\ &\geq \sum_{i = 1}^{n} A_i - (n-1)\mbox{.}
+\end{align*}
+\hspace*{6mm} We have thus proved the inequality. 
 
 \section*{Question 2 Solutions} % Unnumbered section
 

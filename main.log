@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2021.1.9)  30 JUL 2023 22:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2021.1.9)  30 JUL 2023 23:22
 entering extended mode
-**e:/junk/UNSW/Adv-Math/2901/GroupAssignment/main.tex
-(e:/junk/UNSW/Adv-Math/2901/GroupAssignment/main.tex
+**e:/junk/UNSW/Adv-Math/2901/2901grpAssign/main.tex
+(e:/junk/UNSW/Adv-Math/2901/2901grpAssign/main.tex
 LaTeX2e <2020-02-02> patch level 5
 L3 programming layer <2020-06-18> (E:\PUB\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
@@ -98,7 +98,7 @@ Package: amsthm 2020/05/29 v2.20.6
 \thm@postskip=\skip53
 \thm@headsep=\skip54
 \dth@everypar=\toks26
-) (e:/junk\UNSW\Adv-Math\2901\GroupAssignment\structure.tex (E:\PUB\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+) (e:/junk\UNSW\Adv-Math\2901\2901grpAssign\structure.tex (E:\PUB\MiKTeX\tex/latex/amsfonts\amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
@@ -940,7 +940,7 @@ File: T1XCharter-TLF.fd 2017/06/25 (autoinst) Font definitions for T1/XCharter-T
 )
 LaTeX Font Info:    Font shape `T1/XCharter-TLF/m/n' will be
 (Font)              scaled to size 10.0pt on input line 44.
- (e:/junk\UNSW\Adv-Math\2901\GroupAssignment\main.aux)
+ (e:/junk\UNSW\Adv-Math\2901\2901grpAssign\main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
@@ -1049,19 +1049,19 @@ LaTeX Font Info:    Font shape `T1/XCharter-TLF/b/n' will be
 (Font)              scaled to size 14.4pt on input line 52.
  [1
 
-{C:/Users/NoGam/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] (e:/junk\UNSW\Adv-Math\2901\GroupAssignment\main.aux) ) 
+{C:/Users/NoGam/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [2] (e:/junk\UNSW\Adv-Math\2901\2901grpAssign\main.aux) ) 
 Here is how much of TeX's memory you used:
- 19628 strings out of 480790
- 359477 string characters out of 2911748
- 606284 words of memory out of 3000000
- 35220 multiletter control sequences out of 15000+200000
- 571155 words of font info for 56 fonts, out of 3000000 for 9000
+ 19643 strings out of 480790
+ 359613 string characters out of 2911748
+ 610284 words of memory out of 3000000
+ 35231 multiletter control sequences out of 15000+200000
+ 573466 words of font info for 67 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 76i,6n,74p,854b,281s stack positions out of 5000i,500n,10000p,200000b,50000s
-{E:/Program Files/MikTeX/fonts/enc/dvips/xcharter/xch_uy5hgr.enc} <C:\Users\NoGam\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk><E:/Program Files/MikTeX/fonts/type1/public/xcharter/XCharter-Bold.pfb><E:/Program Files/MikTeX/fonts/type1/public/xcharter/XCharter-Roman.pfb>
-Output written on e:/junk\UNSW\Adv-Math\2901\GroupAssignment\main.pdf (1 page, 112050 bytes).
+ 76i,9n,74p,852b,281s stack positions out of 5000i,500n,10000p,200000b,50000s
+{E:/Program Files/MikTeX/fonts/enc/dvips/xcharter/xch_uy5hgr.enc} <C:\Users\NoGam\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk><E:/Program Files/MikTeX/fonts/type1/public/xcharter/XCharter-Bold.pfb><E:/Program Files/MikTeX/fonts/type1/public/xcharter/XCharter-Roman.pfb><E:/PUB/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><E:/PUB/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><E:/PUB/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><E:/PUB/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><E:/PUB/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><E:/PUB/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><E:/PUB/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on e:/junk\UNSW\Adv-Math\2901\2901grpAssign\main.pdf (2 pages, 169354 bytes).
 PDF statistics:
- 39 PDF objects out of 1000 (max. 8388607)
+ 70 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
