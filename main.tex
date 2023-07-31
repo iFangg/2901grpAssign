@@ -24,6 +24,8 @@
 \usepackage{parskip}
 \usepackage{amsmath}
 \usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{pgfplots}
 
 \DeclareMathOperator{\Ima}{im}
 
@@ -158,7 +160,22 @@ Null Hypothesis: $H_0\mbox{: }\mu = 5$
 
 Alternative Hypothesis: $H_1\mbox{: }\mu \neq 5$
 
+\textbf{NOTE:} For parts b) and c), we will use the rejection region method instead of the asymptotic test due to content restrictions.\\
 b)
+
+The rejection region method can be used here because we reject our null hypothesis, especially after the results show a different mean ($\mu = 6$), supporting the alternative hypothesis. The test statistic is
+\[T_{\mu}(X)\coloneqq \left|\frac{\bar{X}-\mu}{\frac{\sigma}{n}}\right|\mbox{,}\]
+\hspace*{6mm}and substituting our values into the statistic gives
+\begin{align*}
+    \left|\frac{6 - 5}{\frac{1.5}{100}}\right| = 6.67\mbox{ (to two decimal places).}
+\end{align*}
+c)
+
+We set the rejection region to be
+\begin{align*}
+    R &= \left\{x; x\in\mathbb{R}^n\mbox{, }\left|\frac{\bar{X} - \mu_0}{\frac{\sigma}{\sqrt{n}}}\right| > c\right\}\\
+    &= \left\{x; x\in\mathbb{R}^n\mbox{, }6.67 > c\right\}
+\end{align*}
 
 \textbf{Part II:}
 
