@@ -1,0 +1,121 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\usepackage{tabularx}
+\usepackage{changepage}
+\doublespacing
+\usepackage[dvipsnames]{xcolor}
+\newcommand{\ihat}{\mathbf {\hat \imath}}
+\newcommand{\jhat}{\mathbf {\hat \jmath}}
+\newcommand{\nhat}{\mathbf {\hat n}}
+\DeclareMathOperator{\dis}{d}
+\newcommand{\vect}[1]{\mathbf{#1}}
+\newcommand{\beginsp}[1]{\begin{adjustwidth}{2.5cm}{2.5cm}#1\end{adjustwidth}}
+\newcommand{\definition}[2]{\textbf{Definition. #1.}\begin{adjustwidth}{1cm}{1cm}#2\end{adjustwidth}}
+\newcommand{\theorem}[2]{\textbf{Theorem. #1.}\begin{adjustwidth}{1cm}{1cm}#2\end{adjustwidth}}
+\newcommand{\lemma}[2]{\textbf{Lemma. #1.}\begin{adjustwidth}{1cm}{1cm}#2\end{adjustwidth}}
+\newcommand{\corollary}[2]{\textbf{Corollary. #1.}\begin{adjustwidth}{1cm}{1cm}#2\end{adjustwidth}}
+\rmfamily
+\setlength{\parindent}{0pt}
+\usepackage{geometry}
+\geometry{
+paper=a4paper,
+top=2.54cm,
+bottom=2.54cm,
+left=2.54cm, 
+right=2.54cm, 
+headheight=14pt, 
+footskip=1.2cm,
+headsep=1.2cm, 
+}
+
+\begin{document}
+\textbf{Question 2}. Let $U_1 \sim U_{[x_1, y_1]}$ and $U_2 \sim U_{[x_2,y_2]}$ be two independent random variables and, for simplicity, we suppose that $x_1 \leq y_1 \leq x_2 \leq y_2$.
+\begin{enumerate}
+  \item Compute the probability density of $Y \coloneqq U_1 + U_2$ and sketch it.
+  \item For what values of the parameters $x_i, y_i \in \mathbb{R}_+$ for $i = 1, 2$ does $Y$ follow the triangular distribution, i.e. the probability function of $Y$ is of the form given below in $(1)$.
+\end{enumerate}
+A random variable $X$ is said to follow a triangular distribution with parameters $(a,b,c)$ if
+\begin{align}
+  f_X(x) = \begin{cases} \frac{2(x-a)}{(b-a)(c-a)} & a < x \leq c \\ \frac{2(b-x)}{(b-a)(b-c)} & c < x \leq b \end{cases}
+\end{align}
+To answer the following questions, let us take $a = 0$ and $c = \frac{a+b}{2} = \frac{b}{2}$.
+\begin{enumerate}
+  \addtocounter{enumi}{2}
+  \item For a fixed $n$, find the MLE $\hat{b}$ of $b$.
+  \item Find the method of moment estimate of $b$.
+\end{enumerate}~\\
+\textbf{Solution}.
+\begin{enumerate}
+  \item For clarity, let $Z = U_1 + U_2$ instead. First note that $U_1$ and $U_2$ are independent uniformly distributed continuous random variables. Then from the convolution formula, \begin{align} f_Z(z) = \int_{x_2}^{y_2} f_{U_1}(z - u)f_{U_2}(u) \; \mathrm{d} u. \tag{1} \end{align} Note that
+  \begin{align}
+      f_{U_1}(u) = I_{\{x_1 < u < y_1\} \times \frac{1}{y_1 - x_1}} &\implies f_{U_1}(z - u) = I_{\{x_1 < z - u < y_1\} \times \frac{1}{y_1 - x_1}} \notag \\
+      &= I_{\{z - y_1 < u < z - x_1\} \times \frac{1}{y_1 - x_1}} \notag
+  \end{align}
+  and \[f_{U_2} = I_{\{x_2 < u < y_2\}} \times \frac{1}{y_2 - x_2}.\] 
+  Then substituting $f_{U_1}$ and $f_{U_2}$ into $(\ast)$ gives
+  \begin{align}
+      f_Z(z) &= \int_{x_2}^{y_2} I_{\{z-y_1 < u < z-x_1\}} \left( \frac{1}{y_1 - x_1} \times \frac{1}{y_2 - x_2} \right) \; \mathrm{d}u \notag \\
+      &= \int_{\max(x_2,z-y_1)}^{\min(y_2,z-x_1)} \left( \frac{1}{y_1 - x_1} \times \frac{1}{y_2 - x_2} \right) \; \mathrm{d}u. \notag
+  \end{align}
+  But the integrand above is a constant. Hence we have
+  \begin{align}f_Z(z) = \left( \min(y_2, z-x_1) - \max(x_2,z-y_1) \right)\left( \frac{1}{y_1 - x_1} \times \frac{1}{y_2 - x_2} \right), \tag{2}\end{align}
+  for $z \in (x_2, y_2) \cap (z-y_1, z-x_1)$.\\[1\baselineskip]We wish to simplify the interval. This will depend on the value of $z$. Consider the following cases.
+  \begin{enumerate}
+    \item First take $z \leq x_1 + x_2$. Then $z-y_1 \leq z - x_1 \leq x_2 $ so $(x_2, y_2) \cap (z-y_1, z-x_1) = \emptyset$ and \[f_Z(z) = 0.\]
+    \item Next take $x_1 + x_2 \leq z < \min(x_1+y_2, x_2+y_1)$. If $\min(x_1+y_2, x_2+y_1) = x_1+y_2$ then
+    \begin{align}
+      z \leq x_1 + y_2 < x_2 + y_1 &\implies z - x_1 \leq y_2 < x_2 + y_1 - x_1, \quad z-y_1 \leq x_1 + y_2 - y_1 < x_2 \notag \\ 
+      \therefore (2) &\implies f_Z(z) = (z-x_1-x_2)\left( \frac{1}{y_1 - x_1} \times \frac{1}{y_2 - x_2} \right), \notag
+    \end{align}
+    and, similarly, if $\min(x_1+y_2, x_2+y_1) = x_2+y_1$ then
+    \[ f_Z(z) = (z-x_1-x_2)\left( \frac{1}{y_1 - x_1} \times \frac{1}{y_2 - x_2} \right). \]
+    \item Next consider $\min(x_1 + y_2, x_2 + y_1) < z < \max(x_1 + y_2, x_2 + y_1)$. If $\min(x_1+y_2, x_2+y_1) = x_1+y_2$ so $\min(x_2+y_1, x_1+y_2) = x_1+y_2$ then
+    \begin{align}
+      x_1 + y_2 < z < x_2 + y_1 &\implies y_2 < z - x_1 < x_2 + y_1 - x_1, \quad x_1 + y_2 - y_1 < z - y_1 < x_2 \notag \\ 
+      \therefore (2) &\implies f_Z(z) = (y_2 - x_2)\left( \frac{1}{y_1 - x_1} \times \frac{1}{y_2 - x_2} \right), \notag
+    \end{align}
+    and, similarly, if $\min(x_1+y_2, x_2+y_1) = x_2+y_1$ then \[f_Z(z)=(y_1 - x_1)\left( \frac{1}{y_1 - x_1} \times \frac{1}{y_2 - x_2} \right).\]
+    But $x_1+y_2 < x_2+y_1 \implies y_2-x_2 < y_1-x_1$ and $x_2+y_1 < x_1+y_2 \implies y_1-x_1 < y_2-x_2$. Hence we can summarise the result of this third case as \[f_Z(z) = \frac{\min(y_1-x_1, y_2-x_2)}{(y_1-x_1)(y_2-x_2)}.\]
+    \item Now take $\max(x_1+y_2, x_2+y_1) \leq z < y_1+y_2$. First, if $\max(x_1+y_2, x_2+y_1) = x_1+y_2$ then
+    \begin{align}
+      x_2+y_1 \leq x_1+y_2 \leq z &\implies x_2+y_1-x_1 \leq y_2 \leq z-x_1, \; x_2 \leq x_1+y_2 \leq z-y_1 \notag \\ 
+      \therefore (2) &\implies f_Z(z) = (y_2 - z + y_1)\left( \frac{1}{y_1 - x_1} \times \frac{1}{y_2 - x_2} \right), \notag
+    \end{align}
+    and second, if $\min(x_1+y_2, x_2+y_1) = x_2+y_1$ then, similarly,
+    \[ f_Z(z) = (y_2-z-y_1)\left( \frac{1}{y_1 - x_1} \times \frac{1}{y_2 - x_2} \right). \]
+    \item Finally, take $z \geq y_1 + y_2$. Then $z-x_1 \geq z-y_1 \geq y_2$ so $(x_2, y_2) \cap (z-y_1, z-x_1) = \emptyset$ and \[f_Z(z) = 0.\]
+  \end{enumerate}
+  From these cases, we have that the probability density of $Z = U_1 + U_2$ in full is given by \[f_Z(z) =
+  \begin{cases}
+    \dfrac{z-(x_1+x_2)}{(y_1 - x_1)(y_2-x_2)} & x_1+x_2 < z \leq \min(x_1+y_2,x_2+y_1) \\
+    \dfrac{\min(y_1-x_1, y_2-x_2)}{(y_1 - x_1)(y_2-x_2)} & \min(x_1+y_2, x_2+y_1) < z < \max(x_1+y_2, x_2+y_1) \\
+    \dfrac{-z+(y_2-y_1)}{(y_1 - x_1)(y_2-x_2)} & \max(x_1+y_2, x_2+y_1) \leq z < y_1 + y_2 \\
+    0 & \text{otherwise}
+  \end{cases}\]
+  It is sketched below.\newpage
+  \item First note that the shape of the probability density function of $f_Z(z)$ is a trapezium. Then, clearly, we achieve a triangular distribution the interval \[|\min(x_1+y_2, x_2+y_1) < z < \max(x_1+y_2, x_2+y_1)| = 0, \tag{3}\]and so the top edge of trapezium vanishes.\\[1\baselineskip]
+  But \[(3) \Longleftrightarrow \min(x_1+y_2, x_2+y_1) = \max(x_1+y_2, x_2+y_1),\] and this is only possible when $x_1 + y_2 = x_2 + y_1$.
+  \item From the question, the probability density function is \begin{align}
+    f_X(x) &= \begin{cases}\frac{4x}{b^2} & 0 < x \leq \frac{b}{2} \\ \frac{4(b-x)}{b^2} & \frac{b}{2} < x \leq b \end{cases} \notag \\
+    &= \frac{4x}{b^2}I_{\{0<x\leq\frac{b}{2}\}} + \frac{4(b-x)}{b^2}I_{\{\frac{b}{2} < x \leq b\}} \notag
+  \end{align}
+  Then
+  \[\mathcal{L}(x; b_1, \ldots, x_n) = \prod_{i=1}^n f_{X_i}(x) = \prod_{i=1}^n \left(\left(\frac{4x}{b^2}\right)^i I_{\{0 < x \leq \frac{b}{2}\}} + \left(\frac{4(b-x)}{b^2}\right)^iI_{\{\frac{b}{2} < x \leq b\}}\right).\]
+  Fixing $n = 1$ we have \[\mathcal{L}(x; b_1) = \frac{4x}{b^2}I_{\{0<x\leq\frac{b}{2}\}} + \frac{4(b-x)}{b^2}I_{\{\frac{b}{2} < x \leq b\}}.\]
+  Note that $\mathcal{L}(x; b_1)$ is strictly increasing for $0 < x \leq \frac{b}{2}$ and strictly decreasing for $\frac{b}{2} < x \leq b$. Thus $b = 2x$ maximises $f_X(x; b)$ and so $\hat{b} = 2x$.  
+  \item For $k = 1$ the method of moment equations are \begin{align}
+    \mathbb{E}(X) &= \int_a^b x f_X(x) \; \mathrm{d}x \notag \\
+    &= \int_0^b \frac{4x^2}{b^2}I_{\{0<x\leq\frac{b}{2}\}} \; \mathrm{d}x + \int_\frac{b}{2}^b \frac{4x(b-x)}{b^2}I_{\{\frac{b}{2} < x \leq b\}} \; \mathrm{d}x \notag \\
+    &= \frac{1}{2} -\frac{b}{3}. \notag
+  \end{align}
+  But \[\mathbb{E}(X) = \frac{b}{2},\]which leads to the system of equations \[\frac{1}{2} - \frac{b}{3} = \frac{b}{2}.\]Thus, $b = 0.6$.
+\end{enumerate}
+\end{document}
