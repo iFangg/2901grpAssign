@@ -109,7 +109,47 @@ Using the previous proven inequality,
 
 
 \section*{Question 3 Solutions} % Unnumbered section
+1.
 
+We can see that $\tilde{X_n} = \bar{X_n} + \frac{1}{n}(2X_1)-\frac{1}{n}\left(X_{n-1}+X_n\right)$. Now calculating the bias of $\tilde{X_n}$
+\begin{align*}
+    \mbox{Bias}(\tilde{X_n}) &=\mbox{E}(\tilde{X_n})-\mu\\
+    &= \frac{1}{n}\mbox{E}\left(\sum_{i = 1}^{n}X_i + 2X_1 - (X_{n-1}+X_n)\right)-\mu\\
+    &= \frac{1}{n}\mbox{E}\left(\sum_{i = 1}^{n}X_i\right)+\frac{1}{n}\mbox{E}(2X_1)-\frac{1}{n}\mbox{E}(X_{n-1}+X_n)\mu\mbox{.}
+\end{align*}
+\hspace*{6mm}Because the random sample is independent identiclaly distributed, the expected value of each variable in the sample is equal to the mean. This means that our simplified equation becomes
+\begin{align*}
+    \frac{1}{n}\mbox{E}\left(\sum_{i = 1}^{n}X_i\right)+\frac{2}{n}\mbox{E}(X_1)-\frac{1}{n}\mbox{E}(X_{n-1})-\frac{1}{n}\mbox{E}(X_n)\mu &= \mu + \frac{2}{n}\mu -\frac{1}{n}\mu -\frac{1}{n}\mu -\mu\\
+    &= 0\mbox{.}
+\end{align*}
+We have thus shown that $\tilde{X_n}$ is an unbiased estimator of $\mu$.
+
+2.
+
+The mean square error can be written as
+\begin{align*}
+    \mbox{MSE}(\tilde{X_n}) &= \mbox{Var}(\tilde{X_n})+(\mbox{Bias}(\tilde{X_n}))^2\\
+    &= \mbox{Var}(\tilde{X_n})\\
+    &= \mbox{E}(\tilde{X_n}^2)-\mbox{E}(\tilde{X_n})^2\\
+    &= \mbox{E}\left[\frac{1}{n^2}\left(\sum_{i = 1}^{n}X_i + 2X_1-X_{n-1}-X_n\right)^2\right] - \mu^2\\
+    &= \frac{1}{n^2}\mbox{E}\left[\left(\sum_{i = 1}^{n}X_i\right)^2 + 2\left(\sum_{i = 1}^{n}\right)(2X_1 - X_{n - 1} - X_n) + (2X_1 - X_{n - 1} - X_n)^2\right] - \mu^2\\
+    &= \frac{1}{n^2}\mbox{E}\left[\left(\sum_{i = 1}^{n}X_i\right)^2\right] + \frac{2}{n^2}\mbox{E}\left[\left(\sum_{i = 1}^{n}X_i\right)(2X_1-X_{n-1}-X_n)\right]+\frac{1}{n^2}\mbox{E}\left[(2X_1-X_{n-1}-X_n)^2\right] - \mu^2\\
+    &= \frac{1}{n}\mbox{E}\left(\sum_{i = 1}^{n}X_i\right)\times\frac{1}{n}\mbox{E}\left(\sum_{i = 1}^{n}X_i\right)+\frac{2}{n}\mbox{E}\left(\sum_{i = 1}^{n}X_i\right)\times\frac{1}{n}\mbox{E}(2X_1-X_{n-1}-X_n) + \frac{1}{n}\mbox{E}(2X_1-X_{n-1}-X_n)\times\frac{1}{n}\mbox{E}(2X_1-X_{n-1}-X_n) - \mu^2\\
+    &= \mu^2 + 2\mu\times\frac{1}{n} + \left[\frac{1}{n}\mbox{E}(2X_1-X_{n-1}-X_n)\right]^2 - \mu^2\\
+    &= 2\mu\times\frac{1}{n}(2\mu-\mu-\mu)+\frac{1}{n^2}(2\mu-\mu-\mu)^2\\
+    &= 0\mbox{.}
+\end{align*}
+Thus, the MSE is $0$.
+
+3.
+\begin{align*}
+    \lim_{n\rightarrow\infty}\mbox{MSE}(\tilde{X_n}) &= \lim_{n\rightarrow\infty}0\\
+    &= 0\mbox{.}
+\end{align*}
+
+4.
+
+Measure consistency of both estimators.
 
 \section*{Question 4 Solutions} % Unnumbered section
 
