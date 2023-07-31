@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1690832615 "/home/birds/uni_stuff/2901grpAssign/Q2/Q2.tex" "Q2.pdf" "Q2" 1690832615
+["pdflatex"] 1690838782 "/home/birds/uni_stuff/2901grpAssign/Q2/Q2.tex" "Q2.pdf" "Q2" 1690838782
   "/etc/texmf/web2c/texmf.cnf" 1687622324 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/birds/uni_stuff/2901grpAssign/Q2/Q2.tex" 1690832614 8248 a36a109f52e000696c1e50b1a177aecf ""
+  "/home/birds/uni_stuff/2901grpAssign/Q2/Q2.tex" 1690838781 8333 7f4e6ac0a2851b1767ea06712feec193 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -69,8 +69,9 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1687627209 128028 f533b797fba58d231669ea19e894e23e ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1687627213 1405650 55b7b92c31940d2499a07a86950bd5fb ""
-  "Q2.aux" 1690832615 32 2d1df76398b3c48c6419a45a7331db2d "pdflatex"
-  "Q2.tex" 1690832614 8248 a36a109f52e000696c1e50b1a177aecf ""
+  "Q2.aux" 1690838782 32 2d1df76398b3c48c6419a45a7331db2d "pdflatex"
+  "Q2.tex" 1690838781 8333 7f4e6ac0a2851b1767ea06712feec193 ""
+  "assets/fml.PNG" 1690838689 78114 a4417eee2a2306eb4203ace72a2872be ""
   (generated)
   "Q2.aux"
   "Q2.log"
