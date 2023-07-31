@@ -1,0 +1,64 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\usepackage{tabularx}
+\usepackage{changepage}
+\doublespacing
+\usepackage[dvipsnames]{xcolor}
+\newcommand{\ihat}{\mathbf {\hat \imath}}
+\newcommand{\jhat}{\mathbf {\hat \jmath}}
+\newcommand{\nhat}{\mathbf {\hat n}}
+\DeclareMathOperator{\dis}{d}
+\newcommand{\vect}[1]{\mathbf{#1}}
+\newcommand{\beginsp}[1]{\begin{adjustwidth}{2.5cm}{2.5cm}#1\end{adjustwidth}}
+\newcommand{\definition}[2]{\textbf{Definition. #1.}\begin{adjustwidth}{1cm}{1cm}#2\end{adjustwidth}}
+\newcommand{\theorem}[2]{\textbf{Theorem. #1.}\begin{adjustwidth}{1cm}{1cm}#2\end{adjustwidth}}
+\newcommand{\lemma}[2]{\textbf{Lemma. #1.}\begin{adjustwidth}{1cm}{1cm}#2\end{adjustwidth}}
+\newcommand{\corollary}[2]{\textbf{Corollary. #1.}\begin{adjustwidth}{1cm}{1cm}#2\end{adjustwidth}}
+\rmfamily
+\setlength{\parindent}{0pt}
+\usepackage{geometry}
+\geometry{
+paper=a4paper,
+top=2.54cm,
+bottom=2.54cm,
+left=2.54cm, 
+right=2.54cm, 
+headheight=14pt, 
+footskip=1.2cm,
+headsep=1.2cm, 
+}
+
+\begin{document}
+\textbf{Part II}. \textbf{Solution}.
+\begin{enumerate}
+    \item From the assumption, $X_i \sim \text{exp}(\lambda)$ and $f_{X_i}(x_i, \lambda) = \lambda e^{-\lambda x}$. Then the likelihood function is given by \[\mathcal{L}(\lambda; x_1, \ldots, x_n) = \prod_{i=1}^n f_{X_i}(\lambda; x_i) = \prod_{i=1}^n \lambda e^{-\lambda x_i}\]and the log-likelihood function is given by \[\ell(\lambda; x_1, \ldots, x_n) = \ln \{ \mathcal{L}(\lambda; x_1, \ldots, x_n)\} = \sum_{i=1}^n \ln \mathcal{L}(\lambda; x_i).\]
+    Observe
+    \begin{align}
+        \frac{\mathrm{d}}{\mathrm{d}\lambda}\ell(\lambda; x_1, \ldots, x_n) &=  \frac{\mathrm{d}}{\mathrm{d\lambda}}\left(\sum_{i=1}^n \ln \mathcal{L}(\lambda; x_i)\right) \notag \\
+        &= \frac{\mathrm{d}}{\mathrm{d}\lambda}\left(\sum_{i=1}^n \ln \left( \prod_{i=1}^n \lambda e^{-\lambda x_i} \right) \right) \notag \\
+        &= \frac{\mathrm{d}}{\mathrm{d}\lambda}\left(\sum_{i=1}^n \ln \left( \lambda^n e^{-\lambda \sum_{i=1}^n} \right) \right) \notag \\
+        &= \frac{\mathrm{d}}{\mathrm{d}\lambda}\left( n \ln \lambda -\lambda \sum_{i=1}^n x_i \right) \notag \\
+        &= \frac{n}{\lambda} - \sum_{i=1}^n x_i \notag \\
+        &= 0 \Longleftrightarrow \lambda = \frac{n}{\sum_{i=1}^n x_i}.
+    \end{align}
+    Noting
+    \[\frac{\mathrm{d}^2}{\mathrm{d}\lambda^2}\left( \ell(\lambda; x_1, \ldots, x_n) = -\frac{n}{\lambda^2}\right) < 0 \quad \forall \lambda \in \mathbb{R} \]shows the value for $\lambda$ in (1) is indeed a maximum and the argmax. Thus, $\hat{\lambda} = \frac{n}{\sum_{i=1}^n x_i}.$
+    \item We wish to approximate the distribution of the MLE $\hat{\lambda}$ using its Fisher score and information.\\From the results in the previous part, the Fisher score can be given by \[S_n(\lambda) = \ell^\prime_n(\lambda) = \frac{n}{\lambda} - \sum_{i=1}^n x_i, \]and the Fisher information by \[I_n(\lambda) = -\mathbb{E}_\lambda \ell^{\prime \prime} _n(\lambda) = -\mathbb{E}\left(-\frac{n}{\lambda^2}\right) = \frac{n}{\lambda^2}\]
+    Note that $\ell(\lambda)$ is a smooth, thrice-differentiable function. So. Finally, from the asymptotic normality of maximum likelihood estimators theorem, we have \[\frac{\hat{\lambda} - \lambda}{\sqrt{\text{Var}(\hat{\lambda})}} \xlongrightarrow{\text{d}} \text{N}(0,1)\]where \[\text{Var}(\hat{\lambda}) \xlongrightarrow{d} \frac{1}{-\mathbb{E}\left(-\frac{n}{\lambda^2}\right)} = \frac{\lambda^2}{n},\] and \[\frac{\hat{\lambda} - \lambda}{\text{se}(\hat{\lambda})} \xlongrightarrow{\text{d}} \text{N}(0,1)\]where $\text{se}(\hat{\lambda})$ denotes the asymptotic standard error of $\hat{\lambda}$ and is given by \[\text{se}(\hat{\lambda}) = \frac{1}{\sqrt{I_n(\lambda)}} = \frac{\lambda}{\sqrt{n}},\]so that we can say \[\hat{\lambda} \overset{\text{appr.}}{\sim} \text{N}(\lambda, \frac{\lambda^2}{n}).\]
+    \item The hypotheses to be tested are: \[H_0: \lambda = 1 \quad \text{(average waiting time matches question proposal)}\] versus \[H_1: \lambda \neq 1 \quad \text{(average waiting time does not match question proposal)}.\]The test statistic we will use is \[\dfrac{\hat{\lambda} - \lambda}{S/\sqrt{5}}\] from the previous part, which has a $t_13$ distribution if the null hypothesis is true. The observed value is \[\dfrac{\hat{\lambda} - \lambda}{S/\sqrt{5}} = \dfrac{\overline{x} - 1}{\frac{0.2}{\sqrt{5}}} = \frac{1.18092 - 1}{\frac{0.2}{\sqrt{5}}}=2.0227\ldots\]Then, using t-distribution tables,
+    \begin{align}
+        P\text{-value} &= \mathbb{P}_{\lambda = 1}\left(\dfrac{\hat{\lambda} - 1}{S/\sqrt{5}}\right) \notag \\
+        &= 2 \mathbb{P}(T > 2.0227), \quad T \sim t_13 \notag \\
+        &\approx 0.114 \notag
+    \end{align}
+    so there is little or no evidence against $H_0$.
+\end{enumerate}
+\end{document}
