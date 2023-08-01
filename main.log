@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2021.1.9)  1 AUG 2023 03:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2021.1.9)  1 AUG 2023 12:12
 entering extended mode
 **e:/junk/UNSW/Adv-Math/2901/2901grpAssign/main.tex
 (e:/junk/UNSW/Adv-Math/2901/2901grpAssign/main.tex
@@ -1117,20 +1117,20 @@ LaTeX Font Info:    Font shape `T1/XCharter-TLF/b/n' will be
 (Font)              scaled to size 14.4pt on input line 54.
  [1
 
-{C:/Users/NoGam/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [2]
+{C:/Users/NoGam/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [2] [3]
 LaTeX Font Info:    Font shape `T1/XCharter-TLF/b/n' will be
 (Font)              scaled to size 10.0pt on input line 156.
- [3] [4] (e:/junk\UNSW\Adv-Math\2901\2901grpAssign\main.aux) ) 
+ [4] (e:/junk\UNSW\Adv-Math\2901\2901grpAssign\main.aux) ) 
 Here is how much of TeX's memory you used:
  30051 strings out of 480790
  702071 string characters out of 2911748
- 1051980 words of memory out of 3000000
+ 1049981 words of memory out of 3000000
  45501 multiletter control sequences out of 15000+200000
  579883 words of font info for 69 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,12n,98p,852b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
 {E:/Program Files/MikTeX/fonts/enc/dvips/xcharter/xch_uy5hgr.enc} <C:\Users\NoGam\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk><E:/Program Files/MikTeX/fonts/type1/public/xcharter/XCharter-Bold.pfb><E:/Program Files/MikTeX/fonts/type1/public/xcharter/XCharter-Roman.pfb><E:/PUB/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><E:/PUB/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><E:/PUB/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><E:/PUB/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><E:/PUB/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><E:/PUB/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><E:/PUB/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><E:/PUB/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><E:/PUB/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on e:/junk\UNSW\Adv-Math\2901\2901grpAssign\main.pdf (4 pages, 209416 bytes).
+Output written on e:/junk\UNSW\Adv-Math\2901\2901grpAssign\main.pdf (4 pages, 209548 bytes).
 PDF statistics:
  84 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

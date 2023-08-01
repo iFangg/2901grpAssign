@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1690823400 "e:/junk/UNSW/Adv-Math/2901/2901grpAssign/main.tex" "e:/junk/UNSW/Adv-Math/2901/2901grpAssign/main.pdf" "main" 1690823412
+["pdflatex"] 1690855973 "e:/junk/UNSW/Adv-Math/2901/2901grpAssign/main.tex" "e:/junk/UNSW/Adv-Math/2901/2901grpAssign/main.pdf" "main" 1690855977
   "C:/Users/NoGam/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ectt1200.pk" 1648812523 24152 2222c2263263aa67232c1764be8a0367 ""
   "C:/Users/NoGam/AppData/Local/MiKTeX/fonts/tfm/public/stmaryrd/stmary10.tfm" 1605916094 848 f478e0761563bbc369eca609a1741348 ""
   "C:/Users/NoGam/AppData/Local/MiKTeX/fonts/tfm/public/stmaryrd/stmary5.tfm" 1605916097 848 e1bc58a31b9ed9c3729ffea165acfaac ""
@@ -231,14 +231,14 @@
   "E:/Program Files/MikTeX/tex/latex/xstring/xstring.sty" 1543854804 123 a302f2c651a95033260db60e51527ae8 ""
   "E:/Program Files/MikTeX/tex/latex/zref/zref-abspage.sty" 1602238298 2275 d29aca6fd67823551cb07584e3681d5d ""
   "E:/Program Files/MikTeX/tex/latex/zref/zref-base.sty" 1602238298 20688 beaddf14d96104d4bf016523be5395c5 ""
-  "e:/junk/UNSW/Adv-Math/2901/2901grpAssign/main.aux" 1690823404 80 8c5127d2ad24bf8547c7bc21ce20861f ""
-  "e:/junk/UNSW/Adv-Math/2901/2901grpAssign/main.tex" 1690823401 7430 72705976137b3ddae1570ac367868514 ""
-  "main.aux" 1690823404 80 8c5127d2ad24bf8547c7bc21ce20861f "pdflatex"
-  "main.tex" 1690823401 7430 72705976137b3ddae1570ac367868514 ""
+  "e:/junk/UNSW/Adv-Math/2901/2901grpAssign/main.aux" 1690855976 80 8c5127d2ad24bf8547c7bc21ce20861f ""
+  "e:/junk/UNSW/Adv-Math/2901/2901grpAssign/main.tex" 1690855971 7429 5545ecafe53c889c1765edde8107e82e ""
+  "main.aux" 1690855976 80 8c5127d2ad24bf8547c7bc21ce20861f "pdflatex"
+  "main.tex" 1690855971 7429 5545ecafe53c889c1765edde8107e82e ""
   "structure.tex" 1648812246 6570 2bb0ee94d7aeeb8eca32600e3ac422ab ""
   (generated)
-  "main.pdf"
   "main.aux"
   "e:/junk/UNSW/Adv-Math/2901/2901grpAssign/main.log"
   "main.log"
   "e:/junk/UNSW/Adv-Math/2901/2901grpAssign/main.pdf"
+  "main.pdf"
